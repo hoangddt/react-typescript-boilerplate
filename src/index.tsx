@@ -1,11 +1,14 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import './styles/global.scss';
-import LandingPage from './pages/Landing/LandingPage';
+import Routes from './router/Routes';
+import store from './redux/store';
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <LandingPage />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Routes />
+  </Provider>,
   document.getElementById('root')
 );
