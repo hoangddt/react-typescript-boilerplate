@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import postsReducer from './slices/postsSlice'
+import storiesReducer from './slices/storiesSlice';
 
 const store = configureStore({
   reducer: {
-    posts: postsReducer
+    stories: storiesReducer
   },
 });
 
-
+export type RootState = ReturnType<typeof store.getState>
 export default store;

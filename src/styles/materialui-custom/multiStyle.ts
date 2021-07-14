@@ -55,6 +55,64 @@ export const useNavStyles = makeStyles(
 		btnsWrapper: {
 			display: 'flex',
 			alignItems: 'center',
-		}	
+		},
+		topLink: {
+			'& > * + *': {
+				marginLeft: theme.spacing(2),
+		    }
+		}
 	})
 );
+
+
+export const useMainPageStyles = makeStyles(
+	(theme) => ({
+		headerPaper: {
+			padding: '0.8em 1.5em',
+		    marginBottom: '1em',
+		    display: 'flex',
+		    alignItems: 'center',
+		},
+		headerIcon: {
+			fontSize: '4.5em',
+      		marginRight: '0.2em',
+		}
+	})
+);
+
+
+export const useNewsListingStyles = makeStyles(
+	(theme) => ({
+		newsPaper: {
+			padding: '0.8em 1.5em',
+		    marginBottom: '1em',
+		    display: 'flex',
+		    alignItems: 'center',
+		    flexDirection: 'column'
+		},
+		lineOne: {
+			'& > * + *': {
+				marginLeft: theme.spacing(0.5),
+		    }
+		},
+		lineTwo: {
+			marginLeft: '1em',
+			'& > * + *': {
+				marginLeft: theme.spacing(0.5),
+		    }
+		}
+	})
+);
+
+export const useBodyStyles = makeStyles(
+    (theme) => ({
+      root: {
+        // width: '100vW',
+        // display: 'flex',
+        // flexDirection: 'column',
+        // flex: 1,
+        // minHeight: '100vH',
+        backgroundColor: '#00968810',
+      },
+    })
+  );

@@ -45,34 +45,32 @@ const NavBar = ({isChild = false}: NavBarProps) => {
 		if (!isChild) {
 			return (
 				<div className={classes.logoWrapper}>
-					<Button to="/" color="secondary" className={classes.logoBtn}>
+					<Button color="secondary" className={classes.logoBtn}>
 						<img src={HackerNewIcon} alt="logo" className={classes.svgImage} />
-            			Hacker News
+						Hacker News
 					</Button>
-					<Typography variant="caption" color="secondary">
-		              Made with{' '}
-		              <FavoriteIcon style={{ fontSize: 10 }} color="primary" /> by{' '}
-		              <Link
-		                href={'https://github.com/hoangddt'}
-		                color="inherit"
-		                target="_blank"
-		                rel="noopener"
-		              >
-		                <strong>hoangddt</strong>
-		              </Link>
-		            </Typography>
+					<Typography className={classes.topLink}>
+						<Link href="#" color="inherit" rel="noopener">news</Link>
+						<Link href="#" color="inherit" rel="noopener">threads</Link>
+						<Link href="#" color="inherit" rel="noopener">past</Link>
+						<Link href="#" color="inherit" rel="noopener">comment</Link>
+						<Link href="#" color="inherit" rel="noopener">ask</Link>
+						<Link href="#" color="inherit" rel="noopener">show</Link>
+						<Link href="#" color="inherit" rel="noopener">job</Link>
+						<Link href="#" color="inherit" rel="noopener">submit</Link>
+					</Typography>
 				</div>
 			)
 		} else {
 			return (
 				<Button
-		          startIcon={<ArrowBackIcon />}
-		          color="secondary"
-		          onClick={handleGoBack}
-		          className="backBtn"
-		        >
-		          Home
-		        </Button>
+				  startIcon={<ArrowBackIcon />}
+				  color="secondary"
+				  onClick={handleGoBack}
+				  className="backBtn"
+				>
+				  Home
+				</Button>
 			)
 		}
 	}
