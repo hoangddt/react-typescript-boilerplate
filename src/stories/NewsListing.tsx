@@ -58,16 +58,16 @@ const NewsListing = ({
 
 	if (fetchStatus === 'succeeded') {
 		return (
-			<Container>
+			<Container className={classes.root}>
 				{stories.map((story, index) => {
 					let itemDate = new Date(story.time * 1000);
 					return (
-						<Paper key={story.id} className={classes.newsPaper}>
+						<Paper key={story.id} className={classes.newsPaper} square>
 							<Container className={classes.lineOne}>
 								<Typography component="span">{`${index + 1}. `}</Typography>
 								<Link href={story.url} color="inherit" rel="noopener">{story.title}</Link>
 								<Typography component="span">{'('}</Typography>
-								<Link href="#" color="inherit">{getDomain(story.url)}</Link>
+								<Link href="#" color="inherit">{getDomain(story.url!)}</Link>
 								<Typography component="span">{')'}</Typography>
 							</Container>
 							<Container className={classes.lineTwo}>

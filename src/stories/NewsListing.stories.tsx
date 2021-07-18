@@ -2,7 +2,10 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import NewsListing from './NewsListing';
+import store from '../redux/store';
+import { fetchStories } from '../redux/slices/storiesSlice';
 
+store.dispatch(fetchStories())
 
 export default {
   title: 'Example/NewsListing',

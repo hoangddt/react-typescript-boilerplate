@@ -83,9 +83,12 @@ export const useMainPageStyles = makeStyles(
 
 export const useNewsListingStyles = makeStyles(
 	(theme) => ({
+		root: {
+			paddingTop: '1em'
+		},
 		newsPaper: {
 			padding: '0.8em 1.5em',
-		    marginBottom: '1em',
+		    // marginBottom: '1em',
 		    display: 'flex',
 		    alignItems: 'center',
 		    flexDirection: 'column'
