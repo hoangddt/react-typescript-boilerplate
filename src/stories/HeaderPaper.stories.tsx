@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import HeaderPaper from './HeaderPaper';
+import HeaderPaper from '../components/HeaderPaper';
 
 export default {
   title: 'Example/HeaderPaper',

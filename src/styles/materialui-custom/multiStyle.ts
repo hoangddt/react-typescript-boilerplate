@@ -96,7 +96,8 @@ export const useNewsListingStyles = makeStyles(
 		lineOne: {
 			'& > * + *': {
 				marginLeft: theme.spacing(0.5),
-		    }
+		  },
+		  // flexWrap: 'wrap'
 		},
 		lineTwo: {
 			marginLeft: '1em',

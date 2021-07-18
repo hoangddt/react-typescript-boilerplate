@@ -7,23 +7,23 @@ import {
 } from '@material-ui/core';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import { useNewsListingStyles } from '../styles/materialui-custom/multiStyle';
-import LoadingSpinner from '../components/LoadingSpinner';
-import InfoText from '../components/InfoText';
+import LoadingSpinner from './LoadingSpinner';
+import InfoText from './InfoText';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import TimeAgo from 'react-timeago';
 
-interface NewsListingProps {
+interface StoriesListingProps {
 	fetchStatus?: 'loading' | 'failed' | 'succeeded' | 'idle';
 	fetchError?: string;
 }
 
-const NewsListing = ({
+const StoriesListing = ({
 	fetchStatus = 'loading',
 	fetchError = "There are problems with the internet connection",
 	...props
-}: NewsListingProps) => {
+}: StoriesListingProps) => {
 	const stories = useSelector((state: RootState) => state.stories.stories);
 	fetchStatus = useSelector((state: RootState) => state.stories.fetchStatus);
 	console.log("/stories/: ", stories)
@@ -90,4 +90,4 @@ const NewsListing = ({
 };
 
 
-export default NewsListing;
+export default StoriesListing;
