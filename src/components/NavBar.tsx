@@ -12,6 +12,8 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import HackerNewIcon from '../img/hacker-news.svg';
 import { useNavStyles } from '../styles/materialui-custom/multiStyle';
+import { useTranslation } from 'react-i18next';
+
 interface NavBarProps {
 	isChild: boolean;
 }
@@ -19,6 +21,7 @@ interface NavBarProps {
 
 const NavRightButton = () => {
 	const classes = useNavStyles();
+
 	return (
 		<div className={classes.btnsWrapper}>
 			<div className={classes.userInfo}>
@@ -40,7 +43,13 @@ const NavBar = ({isChild = false}: NavBarProps) => {
 	const handleGoBack = () => {
 		console.log("Go back pressed!");
 	}
+	const { t, i18n } = useTranslation();
 
+	const changeLanguage = (lng: string) => {
+		i18n.changeLanguage(lng);
+	};
+
+	changeLanguage('vi');
 	const mainButton = () => {
 		if (!isChild) {
 			return (
@@ -50,11 +59,11 @@ const NavBar = ({isChild = false}: NavBarProps) => {
 						Hacker News
 					</Button>
 					<Typography className={classes.topLink}>
-						<Link href="#" color="inherit" rel="noopener">news</Link>
-						<Link href="#" color="inherit" rel="noopener">threads</Link>
+						<Link href="#" color="inherit" rel="noopener">{t('navbar.new')}</Link>
+						<Link href="#" color="inherit" rel="noopener">{t('navbar.threads')}</Link>
 						<Link href="#" color="inherit" rel="noopener">past</Link>
-						<Link href="#" color="inherit" rel="noopener">comment</Link>
-						<Link href="#" color="inherit" rel="noopener">ask</Link>
+						<Link href="#" color="inherit" rel="noopener">{t('navbar.comment')}</Link>
+						<Link href="#" color="inherit" rel="noopener">{t('navbar.ask')}</Link>
 						<Link href="#" color="inherit" rel="noopener">show</Link>
 						<Link href="#" color="inherit" rel="noopener">job</Link>
 						<Link href="#" color="inherit" rel="noopener">submit</Link>

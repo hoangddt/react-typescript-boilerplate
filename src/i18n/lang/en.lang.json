@@ -1,0 +1,11 @@
+{
+	"navbar": {
+		"new": "new",
+		"threads": "threads",
+		"comment": "comments",
+		"ask": "ask",
+		"show": "show",
+		"jobs": "jobs",
+		"submit": "submit"
+	}
+}

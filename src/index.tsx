@@ -5,6 +5,7 @@ import './styles/global.scss';
 import Routes from './router/Routes';
 import store from './redux/store';
 import { fetchStories } from './redux/slices/storiesSlice';
+import './i18n/index';
 
 store.dispatch(fetchStories())
 
