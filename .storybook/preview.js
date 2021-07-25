@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux';
 import store from 'redux/store';
+import 'i18n/index';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

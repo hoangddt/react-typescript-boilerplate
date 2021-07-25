@@ -49,7 +49,6 @@ const NavBar = ({isChild = false}: NavBarProps) => {
 		i18n.changeLanguage(lng);
 	};
 
-	changeLanguage('vi');
 	const mainButton = () => {
 		if (!isChild) {
 			return (

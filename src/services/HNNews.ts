@@ -21,7 +21,21 @@ const getItems = async () => {
 }
 
 
-const getItem = async (id: string) => {
+const getComments =  async (ids: Array<number>) => {
+	let results = [];
+	for (const id of ids) {
+		console.log("Fetching comments: ", id);
+		let resp = await getItem(id);
+		if (resp.type !== 'comment') {
+			continue;
+		}
+		results.push(resp);
+	}
+	return results;
+}
+
+
+const getItem = async (id: number) => {
 	console.log("/getItem/ running");
 	const response = await axios.get(`${apiURL}/item/${id}.json`);
 	console.log("/getItem/ data:", response.data);
@@ -31,5 +45,6 @@ const getItem = async (id: string) => {
 
 export {
 	getItems,
+	getComments,
 	getItem
 };
