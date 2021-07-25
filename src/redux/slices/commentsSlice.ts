@@ -3,9 +3,7 @@ import {
     createAsyncThunk,
     createEntityAdapter,
 } from '@reduxjs/toolkit';
-import {
-    CommentState,
-} from '../../types/CommentType';
+import CommentState from '../../types/CommentType';
 import { getComments } from '../../services/HNNews';
 
 
