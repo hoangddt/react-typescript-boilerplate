@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from '../img/logo.svg';
 import '../styles/ReactLandingPage.scss';
+import { Button } from 'antd-mobile';
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        <Button>Start</Button>
       </header>
     </div>
   );
