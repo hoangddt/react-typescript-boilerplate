@@ -1,0 +1,85 @@
+.flex-container {
+}
+
+.information-card {
+    background-color: green;
+    flex-direction: row;
+    align-items: center;
+}
+
+.information-body {
+    // background-color: green;
+    width: 70%;
+    color: white;
+    border-top: none;
+    border-bottom: none;
+}
+
+.information-body::before {
+    // this is kinda like hard code, read about Card.Body
+    height: 0 !important;
+}
+
+.information-icon {
+    display: flex;
+    // width: 30%;
+    height: 60px;
+}
+
+.transportation-info {
+    padding-bottom: 0;
+    
+}
+
+.transporation-agent {
+    width: 90%;
+    padding-top: 0;
+}
+
+.transporation-agent::before {
+    // this is kinda like hard code, read about Card.Body
+    height: 0 !important;
+}
+
+
+.clear-top-card-border::before {
+    // this is kinda like hard code, read about Card.Body
+    height: 0 !important;
+}
+
+.clear-top-card-border {
+    border-top: none;
+}
+
+.address-info {
+    // margin-top: -3px;
+}
+
+.order-clickable {
+    color: #56c359;
+}
+
+.success-message {
+    color: #56c359;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.item-sumary {
+    align-items: center;
+    flex-direction: row !important;
+}
+
+.item-summary-img {
+    width: 30%;
+}
+
+.item-summary-text {
+    width: 60%;
+}
+
+.am-card.am-card-full {
+    border-bottom: 0;
+}
