@@ -20,11 +20,13 @@ const OrderInformation = () => {
     return (
         <div>
             <NavBar
+                className="top-nav-bar"
                 mode="light"
                 icon={<Icon type="left" />}
                 onLeftClick={backButtonClicked}
                 rightContent={<FontAwesomeIcon key="0" icon={faQuestionCircle} />}
             >{"Thông tin đơn hàng"}</NavBar>
+            <div className="middle-content">
             <Card full className="information-card">
                 <Card.Body className="information-body clear-top-card-border">
                     <p>Đơn hàng đã hoàn thành</p>
@@ -53,13 +55,13 @@ const OrderInformation = () => {
                     >{'Địa chỉ nhận hàng'}
                 </List.Item>
                 <Card.Body className="transporation-agent clear-top-card-border">
-                    <p>{"Quốc Hoàng"}</p>
-                    <p>{"(+82) 348 658 156"}</p>
+                    <p>{"John Doe"}</p>
+                    <p>{"(+82) 123 456 789"}</p>
                     <p>{"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"}</p>
                 </Card.Body>
             </Card>
             <WhiteSpace />
-            <Card>
+            <Card full>
                 <List.Item
                     thumb={<FontAwesomeIcon key="0" icon={faStore} color="#339af0" />}
                     arrow="horizontal"
@@ -67,7 +69,7 @@ const OrderInformation = () => {
                     onClick={() => {}}
                     >{'edra_store'}
                 </List.Item>
-                <Card className="item-summary">
+                <Card className="item-summary" full>
                     <Card.Body className="item-summary-img clear-top-card-border">
                         <img src="https://via.placeholder.com/150"></img>
                     </Card.Body>
@@ -85,7 +87,7 @@ const OrderInformation = () => {
                 </Card.Body>
             </Card>
             <WhiteSpace></WhiteSpace>
-            <Card>
+            <Card full>
                 <List.Item
                     thumb={<FontAwesomeIcon key="0" icon={faMoneyCheckAlt} color="#339af0" />}
                     onClick={() => {}}
@@ -95,7 +97,8 @@ const OrderInformation = () => {
                     <p>{"Thanh toán khi nhận hàng"}</p>
                 </Card.Body>
             </Card>
-            <Card full>
+            </div>
+            <Card full className="bottom-nav">
                 <Card.Body className="clear-top-card-border">
                     <Button type="warning">{"Đánh giá"}</Button>
                 </Card.Body>
